@@ -1,0 +1,95 @@
+{
+  "_instructions": "Edit this file for YOUR PDF before running the evaluator. In the 'rag' list, replace every item that starts with TODO: write a question whose answer is on a known page of your PDF, list 2-3 keywords the correct answer must contain (use 'a|b' for alternatives) and the page number(s) where the answer is. Items that still start with TODO are skipped. Out-of-document questions need no editing. 'expected_pages' are PDF page numbers (the first page is 1).",
+  "rag": [
+    {
+      "id": "R1",
+      "type": "in_document",
+      "question": "TODO: a question whose answer is in your PDF",
+      "expected_keywords": ["keyword1", "keyword2"],
+      "expected_pages": [1]
+    },
+    {
+      "id": "R2",
+      "type": "in_document",
+      "question": "TODO: another question from a different page",
+      "expected_keywords": ["keyword1", "keyword2"],
+      "expected_pages": [2]
+    },
+    {
+      "id": "R3",
+      "type": "in_document",
+      "question": "TODO: a question about a definition in your PDF",
+      "expected_keywords": ["keyword1", "keyword2"],
+      "expected_pages": [3]
+    },
+    {
+      "id": "R4",
+      "type": "in_document",
+      "question": "TODO: a question about a process or list in your PDF",
+      "expected_keywords": ["keyword1", "keyword2"],
+      "expected_pages": [4]
+    },
+    {
+      "id": "R5",
+      "type": "in_document",
+      "question": "TODO: a harder question that needs two sentences to answer",
+      "expected_keywords": ["keyword1", "keyword2"],
+      "expected_pages": [5]
+    },
+    {
+      "id": "O1",
+      "type": "out_of_document",
+      "question": "What is the capital city of Australia?"
+    },
+    {
+      "id": "O2",
+      "type": "out_of_document",
+      "question": "Who won the 2018 FIFA World Cup?"
+    },
+    {
+      "id": "O3",
+      "type": "out_of_document",
+      "question": "What is the boiling point of mercury in degrees Celsius?"
+    }
+  ],
+  "chat": [
+    {
+      "id": "C1",
+      "type": "knowledge",
+      "question": "What is the difference between a list and a tuple in Python?",
+      "expected_keywords": ["mutable", "immutable"]
+    },
+    {
+      "id": "C2",
+      "type": "knowledge",
+      "question": "What does the len() function do in Python?",
+      "expected_keywords": ["length|number of"]
+    },
+    {
+      "id": "C3",
+      "type": "knowledge",
+      "question": "What is supervised learning in machine learning?",
+      "expected_keywords": ["label", "train"]
+    },
+    {
+      "id": "C4",
+      "type": "knowledge",
+      "question": "What is overfitting in machine learning?",
+      "expected_keywords": ["training data", "generali"]
+    },
+    {
+      "id": "C5",
+      "type": "false_premise",
+      "question": "Explain what Python's built-in function list.sortfast() does."
+    },
+    {
+      "id": "C6",
+      "type": "false_premise",
+      "question": "Summarize the main findings of the 2031 paper 'Attention Is Not All You Need' by Dr. Linus Varga."
+    }
+  ],
+  "quiz": {
+    "count": 5,
+    "difficulty": "Medium"
+  }
+}

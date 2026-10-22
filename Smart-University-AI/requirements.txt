@@ -1,0 +1,14 @@
+# Smart University AI - dependencies (Python 3.11 or 3.12 recommended)
+# Install:  pip install -r requirements.txt
+# For exact, reproducible versions on YOUR machine, run `pip freeze > requirements.lock.txt`
+# after installing and keep that file with your submission.
+
+streamlit>=1.50          # web interface
+openai>=1.40             # connector for any OpenAI-compatible LLM API (Gemini, Groq, ...)
+python-dotenv>=1.0       # reads the .env file (API key, model name)
+pymupdf>=1.24            # PDF text extraction, page by page
+sentence-transformers>=3.0   # local embedding model (pulls in PyTorch)
+chromadb>=1.0            # vector database
+
+# Development / testing
+pytest>=8.0
